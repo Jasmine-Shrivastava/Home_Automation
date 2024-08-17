@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="@drawable/home"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    >
+
+  <RelativeLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/blackback"
+
+      android:background="#040404"
+      android:paddingLeft="10dp"
+      android:layout_marginTop="12dp"
+      android:alpha="0.8"
+
+      android:paddingRight="10dp"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Energy Consumption Predictor"
+        android:id="@+id/energytext"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"></TextView>
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Temperature : "
+        android:id="@+id/tempShowname"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/energytext"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        ></TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:hint="Temperature (in Celsius)"
+        android:id="@+id/tempShow"
+        android:layout_below="@+id/energytext"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/tempShowname"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        ></TextView>
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Humidity : "
+        android:id="@+id/humidname"
+        android:layout_below="@+id/tempShowname"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        ></TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:hint="Humidity(in %)"
+        android:id="@+id/humidShow"
+        android:layout_toRightOf="@+id/humidname"
+        android:layout_below="@+id/tempShowname"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="20dp"
+
+        android:inputType="numberDecimal"
+        ></TextView>
+
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Light Intencity : "
+        android:id="@+id/lightname"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_below="@+id/humidname"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        ></TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:hint="Light Intensity"
+        android:id="@+id/lightShow"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/humidname"
+        android:layout_toRightOf="@+id/lightname"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:inputType="numberDecimal"
+        ></TextView>
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Occupancy status : "
+        android:id="@+id/ocstname"
+        android:layout_below="@+id/lightname"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        ></TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:hint="Occupancy Status"
+        android:id="@+id/ocst"
+        android:layout_below="@+id/lightname"
+        android:layout_toRightOf="@+id/ocstname"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        ></TextView>
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="Day of Week"-->
+    <!--        android:id="@+id/dw"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        ></EditText>-->
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="Hour of Day"-->
+    <!--        android:id="@+id/hd"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        ></EditText>-->
+
+
+
+
+
+
+  </RelativeLayout>
+
+  <Button
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:text="Predict Energy Consumption"
+      android:gravity="center"
+
+      android:layout_marginTop="30dp"
+      android:layout_below="@+id/blackback"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:alpha="0.8"
+      android:background="#FFFFFF"
+      app:backgroundTint="@color/black"
+      android:id="@+id/predict"
+      android:layout_centerHorizontal="true"></Button>
+
+  <TextView
+      android:id="@+id/result"
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_below="@+id/predict"
+      android:layout_marginTop="81dp"
+      android:gravity="center"
+      android:inputType="numberDecimal"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:text="Here it will be shown"
+      android:alpha="0.8"
+      android:background="#FFFFFF"
+      app:backgroundTint="@color/black"
+      android:textSize="20dp"></TextView>
+
+
+</RelativeLayout>

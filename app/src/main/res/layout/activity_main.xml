@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rloutmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/home"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/statuslayout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#040404"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:alpha="0.8"
+
+
+        android:paddingRight="10dp">
+        <TextView
+            android:id="@+id/statusview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/temptextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature\n(in °C) "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/statusview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/equaltempview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:layout_below="@+id/statusview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/tempvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="temp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/statusview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:gravity="end" />
+        <TextView
+            android:id="@+id/humiditytextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity\n(in %) "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/temptextview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/equalhumidityview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:layout_below="@+id/temptextview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/humidityvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/equaltempview"
+            android:text="Humid"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/temptextview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:gravity="end" />
+        <TextView
+            android:id="@+id/lightintensitytextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light intensity\n(dark/Light) "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/humiditytextview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/equallightintensityview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:layout_below="@+id/humiditytextview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/lightintensityvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="dark/light"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/humiditytextview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:gravity="end" />
+    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/refreshbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_popup_sync"
+        android:layout_below="@+id/statuslayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:contentDescription="Button"
+        app:backgroundTint="@color/black"
+        android:alpha="0.8"
+        app:tint="@color/white" />
+    <RelativeLayout
+        android:id="@+id/autolayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/refreshbutton"
+        android:layout_marginTop="5dp"
+        android:background="#040404"
+        android:paddingLeft="10dp"
+        android:alpha="0.7"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/automaticmodeview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Automatic Mode"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/autoradio"
+            android:layout_width="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+
+        <TextView
+            android:id="@+id/autostatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="#FFFFFF"
+            android:layout_below="@+id/automaticmodeview"
+            android:textSize="24sp"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:id="@+id/autofan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fan status"
+            android:layout_below="@+id/autostatus"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_marginTop="10sp"
+            />
+
+        <TextView
+            android:id="@+id/autobulb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Bulb status"
+            android:layout_below="@+id/autofan"
+            android:textSize="24sp"
+            android:layout_marginTop="15sp"
+            />
+
+        <TextView
+            android:id="@+id/autofantoggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="On/Off"
+            android:layout_below="@+id/autostatus"
+            android:layout_alignParentRight="true"
+            android:textSize="20dp"
+            android:layout_marginTop="10sp"/>
+        <TextView
+            android:id="@+id/autobulbtoggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On/Off"
+            android:textColor="#FFFFFF"
+            android:layout_below="@+id/autofan"
+            android:textSize="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15sp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/manuallayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/autolayout"
+        android:layout_marginTop="20dp"
+        android:background="#040404"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:alpha="0.8"
+
+        >
+        <TextView
+            android:id="@+id/manualmodeview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manual Mode"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/manualradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/manualstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:layout_below="@+id/manualmodeview"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:id="@+id/manualfan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fan set"
+            android:layout_below="@+id/manualstatus"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_marginTop="20sp"
+            />
+
+        <TextView
+            android:id="@+id/manualbulb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bulb set"
+            android:layout_below="@+id/manualfan"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_marginTop="15dp"
+            />
+
+
+        <Switch
+            android:id="@+id/manualfanswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="OFF/ON"
+            android:layout_below="@id/manualstatus"
+            android:layout_alignParentRight="true"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"/>
+
+
+        <Switch
+            android:id="@+id/manualbulbswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="OFF/ON"
+            android:layout_below="@id/manualfanswitch"
+
+            android:textColor="#FFFFFF"
+            android:layout_alignParentRight="true"
+            android:textSize="24sp"
+            android:layout_marginTop="0dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manuallayout"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:alpha="0.8"
+        android:background="#FFFFFF"
+        android:text="Click here to observe Energy consumption"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/black"></Button>
+
+</RelativeLayout>
